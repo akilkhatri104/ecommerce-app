@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuickCart</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav id="navbar">
+        <p id="logo" onclick="openPage('index.html')">QuickCart</p>
+        <ul>
+            <li><a href="index.html" onclick="openPage('index.html')">Home</a></li>
+            <li><a href="products.html" onclick="openPage('products.html')">Products</a></li>
+            <li><a href="cart.html" onclick="openPage('cart.html')">Cart</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h1 id="welcome">Welcome to QuickCart</h1>
+        <div class="categories">
+            <h1>We Sell These Products</h1>
+            <div id="laptops" class="category"><img src="images/laptop-icon.png" alt="laptop icon"><p>Laptops</p></div>
+            <div id="smartphone" class="category"><img src="images/smartphone-icon.png" alt="smartphone icon"><p>Smartphones</p></div>
+            <div id="mobile-accessories" class="category"><img src="images/mobile-accessories-icon.png" alt="mobile accessories icon"><p>Mobile Accesories</p></div>
+            <div id="tablet" class="category"><img src="images/tablet-icon.png" alt="tablet icon"><p>Tablets    </p></div>
+        </div>
+        
+        <div id="product-listings-homepage">
+            <div id="smartphone-listings-homepage">
+                <h2>Smartphones</h2>
+
+            </div>
+            <div id="mobile-accesories-listings-homepage">
+                <h2>Mobile Accesories</h2>
+
+            </div>
+            <div id="laptops-listings-homepage">
+                <h2>Laptops</h2>
+            </div>
+            <div id="tablets-listings-homepage">
+                <h2>Tablets</h2>
+            </div>
+        </div>
+    </main>
+    <footer></footer>
+</body>
+<script src="product-data.js"></script>
+<script src="index.js"></script>
+</html>
