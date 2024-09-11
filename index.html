@@ -10,19 +10,19 @@
     <nav id="navbar">
         <p id="logo" onclick="openPage('index.html')">QuickCart</p>
         <ul>
-            <li><a href="index.html" onclick="openPage('index.html')">Home</a></li>
-            <li><a href="products.html" onclick="openPage('products.html')">Products</a></li>
-            <li><a href="cart.html" onclick="openPage('cart.html')">Cart</a></li>
+            <li><a href="index.html" >Home</a></li>
+            <li><a href="products.html?category=all" >Products</a></li>
+            <li><a href="cart.html">Cart</a></li>
         </ul>
     </nav>
-    <main>
+    <main id="homepage">
         <h1 id="welcome">Welcome to QuickCart</h1>
         <div class="categories">
             <h1>We Sell These Products</h1>
-            <div id="laptops" class="category"><img src="images/laptop-icon.png" alt="laptop icon"><p>Laptops</p></div>
-            <div id="smartphone" class="category"><img src="images/smartphone-icon.png" alt="smartphone icon"><p>Smartphones</p></div>
-            <div id="mobile-accessories" class="category"><img src="images/mobile-accessories-icon.png" alt="mobile accessories icon"><p>Mobile Accesories</p></div>
-            <div id="tablet" class="category"><img src="images/tablet-icon.png" alt="tablet icon"><p>Tablets    </p></div>
+            <div id="laptop-btn" class="category"><img src="images/laptop-icon.png" alt="laptop icon"><p>Laptops</p></div>
+            <div id="smartphone-btn" class="category"><img src="images/smartphone-icon.png" alt="smartphone icon"><p>Smartphones</p></div>
+            <div id="mobile-accessories-btn" class="category"><img src="images/mobile-accessories-icon.png" alt="mobile accessories icon"><p>Mobile Accesories</p></div>
+            <div id="tablet-btn" class="category"><img src="images/tablet-icon.png" alt="tablet icon"><p>Tablets    </p></div>
         </div>
         
         <div id="product-listings-homepage">
@@ -45,5 +45,6 @@
     <footer></footer>
 </body>
 <script src="product-data.js"></script>
+<script src="products.js"></script>
 <script src="index.js"></script>
 </html>

@@ -5,6 +5,7 @@ function showSmarphonesHomePage(){
     smarphones.forEach((smarphone) =>{
         const smartphoneDiv = document.createElement('div')
         smartphoneDiv.className = 'product-listing'
+        smartphoneDiv.id = smarphone.id
 
         const thumbnail = document.createElement('img')
         thumbnail.className = 'product-thumbnail'
@@ -21,6 +22,10 @@ function showSmarphonesHomePage(){
         price.innerText = `$${smarphone.price}`
         smartphoneDiv.appendChild(price)
 
+        smartphoneDiv.addEventListener('click',()=>{
+            open('product-page.html?id='+smarphone.id,'_self')
+        })
+
         smartphonesDiv.appendChild(smartphoneDiv)
     })
 
@@ -33,6 +38,7 @@ function showMobileAccesoriesHomePage(){
     mobileAccesories.forEach((mobileAccesory) =>{
         const mobileAccesoryDiv = document.createElement('div')
         mobileAccesoryDiv.className = 'product-listing'
+        mobileAccesoriesDiv.id = mobileAccesory.id
 
         const thumbnail = document.createElement('img')
         thumbnail.className = 'product-thumbnail'
@@ -49,6 +55,10 @@ function showMobileAccesoriesHomePage(){
         price.innerText = `$${mobileAccesory.price}`
         mobileAccesoryDiv.appendChild(price)
 
+        mobileAccesoryDiv.addEventListener('click',()=>{
+            open('product-page.html?id='+mobileAccesory.id,'_self')
+        })
+
         mobileAccesoriesDiv.appendChild(mobileAccesoryDiv)
     })
 
@@ -61,6 +71,7 @@ function showLaptopsHomePage(){
     laptops.forEach((laptop) =>{
         const laptopDiv = document.createElement('div')
         laptopDiv.className = 'product-listing'
+        laptopDiv.id = laptop.id
 
         const thumbnail = document.createElement('img')
         thumbnail.className = 'product-thumbnail'
@@ -77,6 +88,10 @@ function showLaptopsHomePage(){
         price.innerText = `$${laptop.price}`
         laptopDiv.appendChild(price)
 
+        laptopDiv.addEventListener('click',()=>{
+            open('product-page.html?id='+laptop.id,'_self')
+        })
+
         laptopsDiv.appendChild(laptopDiv)
     })
 
@@ -89,6 +104,7 @@ function showTabletsHomePage(){
     tablets.forEach((tablet) =>{
         const tabletDiv = document.createElement('div')
         tabletDiv.className = 'product-listing'
+        tabletDiv.id = tablet.id
 
         const thumbnail = document.createElement('img')
         thumbnail.className = 'product-thumbnail'
@@ -105,6 +121,10 @@ function showTabletsHomePage(){
         price.innerText = `$${tablet.price}`
         tabletDiv.appendChild(price)
 
+        tabletDiv.addEventListener('click',() => {
+            open('product-page.html?id='+tablet.id,'_self')
+        })
+
         tabletsDiv.appendChild(tabletDiv)
     })
 
@@ -116,3 +136,11 @@ showSmarphonesHomePage()
 showMobileAccesoriesHomePage()
 showLaptopsHomePage()
 showTabletsHomePage()
+
+const laptopBtn = document.querySelector('#laptop-btn')
+laptopBtn.addEventListener('click',()=>{
+    open('products.html?category=laptops','_self')
+})
+document.querySelector('#smartphone-btn').addEventListener('click',()=>{
+    open('products.html?category=smartphones','_self')
+})

@@ -63,8 +63,8 @@ body{
     text-align: center;
     padding: 20px;
     display: inline-block;
-    margin: 0 auto;
     width: 100%;
+
 }
 
 .category{
@@ -74,9 +74,11 @@ body{
     color: rgb(11, 11, 11);
     font-size: 1.5em;
     text-align: center;
-    margin: 20px 75px;
+    margin: 5px auto;
+    margin: 50px;
     transition: all 0.5s ease;
-    float: left;
+    border-radius: 5px;
+    display: inline-block;
 }
 
 
@@ -104,7 +106,14 @@ body{
 
 
 #product-listings-homepage{
-    margin: 25px;
+    margin: 25px auto;
+    width: 75%;
+    
+}
+#product-listings-homepage,#product-listings{
+    margin: 25px auto;
+    width: 75%;
+    
 }
 
 #smartphone-listings-homepage{
@@ -118,6 +127,7 @@ body{
 .product-listing{
     float: left;
     border: 2px solid;
+    border-radius: 5px;
     margin: 5px;
     text-align: center;
     height: 300px;
@@ -126,6 +136,7 @@ body{
     font-size: 1.3em;
     cursor: pointer;
     background-color: #ffffff;
+    transition: all 0.5s ease;
 }
 
 .product-listing:hover{
@@ -141,8 +152,46 @@ body{
 }
 
 @media screen and (max-width: 600px) {
+    #product-listings-homepage{
+        text-align: center;
+    }
     .product-listing{
         float:none;
         margin: 5px auto;
+        width: 100%;
+        height: auto;
     }
+
+    #navbar{
+        text-align: center;
+        height: auto;
+    }
+    #navbar p{
+        text-align: center;
+        display: block;
+        margin: 0 auto;
+    }
+    #navbar ul{
+        float: none;
+        margin: 0 auto;
+        display: block;
+        clear: both;
+    }
+}
+
+#products-main{
+    margin: 0;
+    padding: 0;
+}
+
+select{
+    font-size: 1.5em;
+    padding: 5px;
+    margin: 10px;
+    float: left;
+}
+
+#product-listings{
+    clear: both;
+    margin: 0 auto;
 }
