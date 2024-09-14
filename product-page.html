@@ -8,7 +8,7 @@
 </head>
 <body>
     <nav id="navbar">
-        <p id="logo" onclick="openPage('index.html')">QuickCart</p>
+        <p id="logo" onclick="open('index.html','_self')">QuickCart</p>
         <ul>
             <li><a href="index.html" >Home</a></li>
             <li><a href="products.html?category=all" >Products</a></li>
@@ -16,7 +16,18 @@
         </ul>
     </nav>
     <main id="product-page">
-        <div class="product-images"></div>
+        <section id="product-main-section">
+            <img id="product-image">
+            <div id="product-details">
+                <p id="product-name"></p>
+                <p id="product-category"></p>
+                <p id="product-price"></p>
+                <div id="image-small"></div>
+                <p id="product-description"></p>
+                <input type="number" name="quantity" id="quantity-input" placeholder="Enter Quantity" min="1">
+                <button id="add-to-cart-btn">Add To Cart</button>
+            </div>
+        </section>
     </main>
     <footer></footer>
 </body>

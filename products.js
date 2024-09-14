@@ -5,8 +5,12 @@ window.onload = function(){
     document.querySelector('#category-selection').value = category
 }
 
+document.querySelector('#category-selection').onchange = function(){
+    open('products.html?category='+this.value,'_self')
+}
 function showproductListings(value){
     console.log('show products: ',value);
+    document.querySelector('#category-selection').value = value
     
     const productListingsDiv = document.querySelector('#product-listings')
     productListingsDiv.innerHTML = ''
@@ -52,7 +56,7 @@ function showproductListings(value){
         productDiv.appendChild(price)
 
         productDiv.addEventListener('click', () => {
-            open('product-page.html?id=' + product.id,'_self')
+            open('product-page.html?id=' + product.id)
         })
 
         productListingsDiv.appendChild(productDiv)

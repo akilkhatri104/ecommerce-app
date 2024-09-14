@@ -23,7 +23,7 @@ function showSmarphonesHomePage(){
         smartphoneDiv.appendChild(price)
 
         smartphoneDiv.addEventListener('click',()=>{
-            open('product-page.html?id='+smarphone.id,'_self')
+            open('product-page.html?id='+smarphone.id)
         })
 
         smartphonesDiv.appendChild(smartphoneDiv)
@@ -56,7 +56,7 @@ function showMobileAccesoriesHomePage(){
         mobileAccesoryDiv.appendChild(price)
 
         mobileAccesoryDiv.addEventListener('click',()=>{
-            open('product-page.html?id='+mobileAccesory.id,'_self')
+            open('product-page.html?id='+mobileAccesory.id)
         })
 
         mobileAccesoriesDiv.appendChild(mobileAccesoryDiv)
@@ -89,7 +89,7 @@ function showLaptopsHomePage(){
         laptopDiv.appendChild(price)
 
         laptopDiv.addEventListener('click',()=>{
-            open('product-page.html?id='+laptop.id,'_self')
+            open('product-page.html?id='+laptop.id)
         })
 
         laptopsDiv.appendChild(laptopDiv)
@@ -122,7 +122,7 @@ function showTabletsHomePage(){
         tabletDiv.appendChild(price)
 
         tabletDiv.addEventListener('click',() => {
-            open('product-page.html?id='+tablet.id,'_self')
+            open('product-page.html?id='+tablet.id)
         })
 
         tabletsDiv.appendChild(tabletDiv)
@@ -139,8 +139,14 @@ showTabletsHomePage()
 
 const laptopBtn = document.querySelector('#laptop-btn')
 laptopBtn.addEventListener('click',()=>{
-    open('products.html?category=laptops','_self')
+    open('products.html?category=laptops')
 })
 document.querySelector('#smartphone-btn').addEventListener('click',()=>{
-    open('products.html?category=smartphones','_self')
+    open('products.html?category=smartphones')
+})
+document.querySelector('#mobile-accessories-btn').addEventListener('click',()=>{
+    open('products.html?category=mobile-accesories')
+})
+document.querySelector('#tablet-btn').addEventListener('click',()=>{
+    open('products.html?category=tablets')
 })

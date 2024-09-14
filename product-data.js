@@ -2351,3 +2351,38 @@ const tablets = Array.from(JSON.parse(`[
 
 const allProducts = [laptops,smarphones,mobileAccesories,tablets]
 const allProductsArray = [...laptops,...smarphones,...mobileAccesories,...tablets]
+let cart = []
+
+function addToCart(product){
+    cart.forEach(item => {
+        if(item.id == product.id){
+            item.quantity += parseInt(document.querySelector('#quantity-input').value)
+            localStorage.setItem('cart', JSON.stringify(cart))
+            return
+        }
+    })
+    localStorage.setItem('cart', JSON.stringify(cart))
+}
+
+function removeFromCart(product){
+    const index = cart.indexOf(product)
+    if(index > -1){
+        if(cart[index].quantity > 1){
+            cart[index].quantity--
+        }else{
+            cart.splice(index,1)
+        }
+    }
+}
+
+function emptyCart(){
+    localStorage.clear()
+    cart = []
+}
+
+window.addEventListener('load', () => {
+    const storedCart = localStorage.getItem('cart')
+    if (storedCart) {
+        cart.push(...JSON.parse(storedCart))
+    }
+})
